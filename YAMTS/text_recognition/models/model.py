@@ -78,6 +78,8 @@ class TextRecognitionModel(nn.Module):
         if transformation_type:
             self.transformation = TRANSFORMATIONS[transformation_type](**transformation)
         self.freeze_backbone = backbone.pop('freeze_backbone', False)
+        
+        self.out_size = out_size
         self.head = TEXT_REC_HEADS[head_type](out_size, **head)
         self.backbone = BACKBONES[backbone_type](**backbone)
         if self.freeze_backbone:
@@ -101,7 +103,9 @@ class TextRecognitionModel(nn.Module):
         checkpoint = torch.load(model_path, map_location=map_location)
         checkpoint = OrderedDict((k.replace('module.', '') if 'module.' in k else k, v) for k, v in checkpoint.items())
         try:
+            
             self.load_state_dict(checkpoint, strict=False)
+            
         except RuntimeError as missing_keys:
             print("""
             Unexpected keys in state_dict.

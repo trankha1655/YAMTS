@@ -281,9 +281,12 @@ class CocoLikeDataset(BaseDataset):
         return el
 
 
+
+
 str_to_class = {
     'Im2LatexDataset': Im2LatexDataset,
     'ICDAR2013RECDataset': ICDAR2013RECDataset,
     'LMDBDataset': LMDBDataset,
     'CocoLikeDataset': CocoLikeDataset,
+   
 }
