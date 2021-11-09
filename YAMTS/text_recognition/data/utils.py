@@ -407,7 +407,7 @@ class TransformColorJitter(BaseTransform):
 
 
 TRANSFORMS = {
-    'TransformResizePad': TransformResizePad,
+    'TransformResizePad': -,
     'TransformCropPad': TransformCropPad,
     'TransformBin': TransformBin,
     'TransformBlur': TransformBlur,

@@ -396,8 +396,8 @@ class ICDAR2015DatasetConverter:
 
         dataset = TextOnlyCocoAnnotation()
 
-        n_images = 229 if self.is_train else 500
-        for i in tqdm(range(1, n_images + 1)):
+        n_begin,n_end = (200+1 ,1000+1) if self.is_train else (0+1,200+1) 
+        for i in tqdm(range(n_begin, n_end)):
             image_path = os.path.join(self.images_folder, 'img_{}.jpg'.format(i))
             annotation_path = os.path.join(self.annotations_folder, 'gt_img_{}.txt'.format(i))
 

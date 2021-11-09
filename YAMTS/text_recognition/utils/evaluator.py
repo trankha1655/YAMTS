@@ -21,10 +21,10 @@ from enum import Enum
 from functools import partial
 
 import numpy as np
-import onnxruntime
+#import onnxruntime
 import torch
-from openvino.inference_engine import IECore
-from scipy.special import log_softmax
+#from openvino.inference_engine import IECore
+#from scipy.special import log_softmax
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 

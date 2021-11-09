@@ -16,7 +16,8 @@
 
 import argparse
 import os
-
+import sys
+sys.path.append("")
 from text_recognition.utils.get_config import get_config
 from text_recognition.utils.evaluator import Evaluator
 

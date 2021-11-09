@@ -1,0 +1,11 @@
+[
+    {
+      "name": "ICDAR2015DatasetConverter",
+      "kwargs": {
+          "images_folder": "IDCAR2015/test/images",
+          "annotations_folder": "IDCAR2015/test/labels",
+          
+          "is_train": false
+      }
+    }
+  ]

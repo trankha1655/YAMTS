@@ -2,8 +2,8 @@
   {
     "name": "ICDAR2015DatasetConverter",
     "kwargs": {
-        "images_folder": "dataset/images",
-        "annotations_folder": "dataset/gt",
+        "images_folder": "IDCAR2015/train/images",
+        "annotations_folder": "IDCAR2015/train/labels",
         
         "is_train": true
     }
